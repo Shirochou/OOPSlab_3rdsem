@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+main(){
+int t;
+cin>>t;
+while(t--){
+int N,F=0,L=0,e=0;
+cin>>N;
+int A[N];
+for(int i=0;i<N;i++){
+cin>>A[i];}
+for(int i=1;i<N-1;i++){
+F=0,L=0;
+for(int d=0;d<i;d++){
+F=F+A[d];}
+for(int c=i+1;c<N;c++){
+L=L+A[c];}
+if(F==L){
+cout<<i<<endl;
+e=1;
+break;}}
+if(e==0){
+cout<<"-1"<<endl;}}}
